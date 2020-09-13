@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="columns is-multiline">
+    <div class="column is-12">
+        {% include pagination.html %}
+    </div>
+
+    <!-- Jane Street -->
+    <h1>Jane Street</h1>
+    {% for post in paginator.categories.jane-street %}
+    <div class="column is-12">
+        {% include post-item.html %}
+    </div>
+    {% endfor %}
+
+    <!-- Goldman Sachs -->
+    <h1>Goldman Sachs</h1>
+    {% for post in paginator.categories.goldman-sachs %}
+    <div class="column is-12">
+        {% include post-item.html %}
+    </div>
+    {% endfor %}
+
+    <!-- Finmechanics -->
+    <h1>Finmechanics</h1>
+    {% for post in paginator.categories.finmechanics %}
+    <div class="column is-12">
+        {% include post-item.html %}
+    </div>
+    {% endfor %}
+
+    <!-- American Express -->
+    <h1>American Express</h1>
+    {% for post in paginator.categories.amex %}
+    <div class="column is-12">
+        {% include post-item.html %}
+    </div>
+    {% endfor %}
+
+    <div class="column is-12">
+            {% include pagination.html %}
+    </div>
+</div>
